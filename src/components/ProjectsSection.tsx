@@ -68,7 +68,7 @@ const ProjectsSection = () => {
                 </div>
                 
                 <Button variant="gradient" className="rounded-full px-6">
-                  See more
+                  View Project
                 </Button>
               </div>
             </div>
