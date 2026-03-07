@@ -1,79 +1,154 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { FaGithub } from "react-icons/fa";
+import { ExternalLink } from "lucide-react";
+
 import image from "@/assets/image.png";
 import BootStrap from "@/assets/BootStrap.png";
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "NeoID for the homeless people",
-      date: "August 2025",
-      description: "A platform that provides a digital identity solution for homeless individuals, enabling them to access essential services and resources. Features include secure identity verification, service provider integration, and user-friendly interfaces. Built with React, Node.js, Express.js and MongoDB. Also added Blockchain for secure identity management.",
+      title: "The Villagers App",
+      date: "March 2026",
+      description:
+        "A platform that connects villagers with essential services and community resources through a simple and accessible interface.",
       image: image,
-      tags: ["Design", "Web" , "Social"],
-      gradient: "from-skill-typescript to-skill-react"
+      tags: ["React", "Web App", "Community"],
+      live: "https://the-villagers-app.vercel.app/",
+      github: "https://github.com/abiraisingh/The-Villagers",
     },
     {
-      title: "Responsive Educational Portal using Bootstrap",
-      date: "August 2024", 
-      description: "Developed a responsive Bootstrap-based educational portal UI, designed with sections for hero promotion, course .",
+      title: "Responsive Educational Portal",
+      date: "August 2024",
+      description:
+        "A responsive educational portal UI built with Bootstrap featuring course sections, hero banners and modern layouts.",
       image: BootStrap,
-      tags: ["Education", "Tech"],
-      gradient: "from-skill-figma to-skill-node"
-    }
+      tags: ["Bootstrap", "UI", "Frontend"],
+      live: "https://abiraisingh.github.io/Bootstrap/",
+      github: "https://github.com/abiraisingh/Bootstrap",
+    },
   ];
 
   return (
-    <section id="portfolio" className="py-20 px-6 bg-gradient-secondary">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-center md:text-left">
-          My projects
-        </h2>
-        
-        <div className="space-y-12 mt-12">
-          {projects.map((project, index) => (
-            <div key={project.title} className={`grid md:grid-cols-2 gap-8 items-center ${index % 2 === 1 ? 'md:grid-flow-col-dense' : ''}`}>
+    <section
+      id="portfolio"
+      className="relative py-24 px-6 overflow-hidden"
+    >
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"></div>
+
+      {/* Glow decorations */}
+      <div className="absolute top-[-120px] right-[-120px] w-[350px] h-[350px] bg-purple-300/40 rounded-full blur-[120px]" />
+      <div className="absolute bottom-[-120px] left-[-120px] w-[350px] h-[350px] bg-blue-300/40 rounded-full blur-[120px]" />
+
+      <div className="relative z-10 max-w-6xl mx-auto">
+
+        {/* Heading */}
+        <div className="text-center mb-16">
+
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+            Featured Projects
+          </h2>
+
+          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+            A collection of projects that demonstrate my ability to design,
+            build and deploy modern web applications.
+          </p>
+
+        </div>
+
+        {/* Project Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          {projects.map((project) => (
+            <div
+              key={project.title}
+              className="group bg-white/70 backdrop-blur-lg border border-white/50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
+            >
+
               {/* Project Image */}
-              <div className={`relative group ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
-                <div className={`absolute inset-0 bg-gradient-to-r ${project.gradient} rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
-                <div className="relative bg-gradient-card rounded-2xl overflow-hidden border border-border/20 shadow-xl">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
+              <div className="overflow-hidden">
+
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
+                />
+
               </div>
 
-              {/* Project Info */}
-              <div className={`space-y-6 ${index % 2 === 1 ? 'md:col-start-1 md:row-start-1' : ''}`}>
+              {/* Project Content */}
+              <div className="p-6 space-y-4">
+
+                {/* Tags */}
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary" className="rounded-full px-3 py-1">
+                    <Badge
+                      key={tag}
+                      className="bg-purple-100 text-purple-700 border border-purple-200"
+                    >
                       {tag}
                     </Badge>
                   ))}
                 </div>
-                
-                <div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    // {project.date}
-                  </p>
-                  <p className="text-foreground/80 leading-relaxed">
-                    {project.description}
-                  </p>
+
+                {/* Title */}
+                <h3 className="text-xl font-semibold text-gray-900">
+                  {project.title}
+                </h3>
+
+                {/* Date */}
+                <p className="text-sm text-gray-500">
+                  {project.date}
+                </p>
+
+                {/* Description */}
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {project.description}
+                </p>
+
+                {/* Buttons */}
+                <div className="flex gap-3 pt-3">
+
+                  {/* Live Demo */}
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1"
+                  >
+                    <Button className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:opacity-90">
+                      <ExternalLink size={16} />
+                      Live
+                    </Button>
+                  </a>
+
+                  {/* GitHub */}
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1"
+                  >
+                    <Button
+                      variant="outline"
+                      className="w-full flex items-center justify-center gap-2"
+                    >
+                      <FaGithub />
+                      Code
+                    </Button>
+                  </a>
+
                 </div>
-                
-                <Button variant="gradient" className="rounded-full px-6">
-                  View Project
-                </Button>
+
               </div>
+
             </div>
           ))}
+
         </div>
+
       </div>
     </section>
   );

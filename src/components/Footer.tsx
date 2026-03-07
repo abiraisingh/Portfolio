@@ -4,56 +4,72 @@ const Footer = () => {
   const footerLinks = [
     { label: "About me", href: "#about" },
     { label: "My skills", href: "#skills" },
-    { label: "My side projects", href: "#portfolio" },
+    { label: "My projects", href: "#portfolio" },
     { label: "Contact me", href: "#contact" },
   ];
 
   return (
-    <footer className="bg-gradient-secondary py-12 px-6 border-t border-border/20">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+    <footer className="relative py-16 px-6 overflow-hidden">
+
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"></div>
+
+      {/* decorative glow */}
+      <div className="absolute top-[-120px] left-[-120px] w-[300px] h-[300px] bg-purple-300/40 rounded-full blur-[120px]" />
+
+      <div className="relative z-10 max-w-6xl mx-auto">
+
+        {/* Top Footer */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+
           {/* Logo */}
-          <div className="text-xl font-bold text-foreground">
+          <div className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
             Abirai Singh
           </div>
 
-          {/* Navigation Links */}
+          {/* Navigation */}
           <nav className="flex flex-wrap justify-center gap-6">
             {footerLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className="text-gray-600 hover:text-gray-900 transition"
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          {/* Download CV Button */}
+          {/* Download CV */}
           <a
-                  href="/resume.pdf"
-                  download="Abirai_Singh_Resume.pdf"
-                  className="rounded-full px-8"
-                >
-                  <Button
-                    variant="gradient"
-                    size="lg"
-                    className="rounded-full px-8"
-                  >
-                    Download CV
-                  </Button>
-                </a>
+            href="/resume.pdf"
+            download="Abirai_Singh_Resume.pdf"
+          >
+            <Button
+              className="rounded-full px-6 bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:opacity-90"
+            >
+              Download CV
+            </Button>
+          </a>
+
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center mt-8 pt-8 border-t border-border/20 gap-4">
-          <p className="text-muted-foreground text-sm">
-            All rights reserved*
+        {/* Divider */}
+        <div className="mt-10 border-t border-gray-200"></div>
+
+        {/* Bottom Footer */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-6 text-sm text-gray-500">
+
+          <p>
+            © {new Date().getFullYear()} Abirai Singh. All rights reserved.
           </p>
-          <p className="text-muted-foreground text-sm">
-            abc@gmail.com
+
+          <p>
+            abirai@example.com
           </p>
+
         </div>
+
       </div>
     </footer>
   );
