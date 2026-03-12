@@ -73,7 +73,7 @@ const Navigation = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden p-2 rounded-lg bg-white/70 backdrop-blur-lg border border-gray-200"
+          className="md:hidden p-2 rounded-lg bg-black/70 backdrop-blur-lg border border-gray-200"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={22} /> : <Menu size={22} />}

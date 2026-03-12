@@ -65,7 +65,7 @@ const Footer = () => {
           </p>
 
           <p>
-            abirai@example.com
+            singhabirai75@gmail.com
           </p>
 
         </div>
