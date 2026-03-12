@@ -137,7 +137,7 @@ const HeroSection = () => {
 
                 {/* LinkedIn */}
                 <a
-                  href="https://linkedin.com/in/YOUR-LINKEDIN"
+                  href="https://www.linkedin.com/in/abirai-singh-330832297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

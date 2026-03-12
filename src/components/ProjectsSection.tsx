@@ -5,6 +5,9 @@ import { ExternalLink } from "lucide-react";
 
 import image from "@/assets/image.png";
 import BootStrap from "@/assets/BootStrap.png";
+import todo from "@/assets/todo.png";
+import socially from "@/assets/socially.png";
+import neoID from "@/assets/neoID.png";
 
 const ProjectsSection = () => {
   const projects = [
@@ -28,13 +31,40 @@ const ProjectsSection = () => {
       live: "https://abiraisingh.github.io/Bootstrap/",
       github: "https://github.com/abiraisingh/Bootstrap",
     },
+    {
+      title: "ToDo List App",
+      date: "February 2026",
+      description:
+        "A simple task management web application that allows users to add, organize and track daily tasks. The app provides a clean and responsive interface to improve productivity and manage personal to-do lists efficiently.",
+      image: todo,
+      tags: ["React", "JavaScript", "Productivity"],
+      live: "https://todo-list-app1-theta.vercel.app/",
+      github: "https://github.com/abiraisingh/todo-list",
+    },
+    {
+      title: "Socially - Social Media Platform",
+      date: "January 2026",
+      description:
+        "A social networking web application that allows users to interact, share posts and connect with others through a simple community-based interface. The project demonstrates frontend UI design and modern web development practices.",
+      image: socially,
+      tags: ["React", "Social Media", "Web App"],
+      live: "https://abiraisingh.github.io/Socially/",
+      github: "https://github.com/abiraisingh/Socially",
+    },
+    {
+      title: "NeoID – Digital Identity for the Homeless",
+      date: "March 2026",
+      description:
+        "A social-impact web platform designed to provide digital identity cards for homeless individuals, enabling them to access essential government services such as healthcare, food assistance, and shelter programs.",
+      image: neoID,
+      tags: ["React", "Social Impact", "Web App"],
+      live: "https://neo-id.vercel.app/",
+      github: "https://github.com/abiraisingh/id-for-all-cards",
+    },
   ];
 
   return (
-    <section
-      id="portfolio"
-      className="relative py-24 px-6 overflow-hidden"
-    >
+    <section id="portfolio" className="relative py-24 px-6 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"></div>
 
@@ -43,10 +73,8 @@ const ProjectsSection = () => {
       <div className="absolute bottom-[-120px] left-[-120px] w-[350px] h-[350px] bg-blue-300/40 rounded-full blur-[120px]" />
 
       <div className="relative z-10 max-w-6xl mx-auto">
-
         {/* Heading */}
         <div className="text-center mb-16">
-
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
             Featured Projects
           </h2>
@@ -55,32 +83,26 @@ const ProjectsSection = () => {
             A collection of projects that demonstrate my ability to design,
             build and deploy modern web applications.
           </p>
-
         </div>
 
         {/* Project Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
           {projects.map((project) => (
             <div
               key={project.title}
               className="group bg-white/70 backdrop-blur-lg border border-white/50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
             >
-
               {/* Project Image */}
               <div className="overflow-hidden">
-
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
                 />
-
               </div>
 
               {/* Project Content */}
               <div className="p-6 space-y-4">
-
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
@@ -99,9 +121,7 @@ const ProjectsSection = () => {
                 </h3>
 
                 {/* Date */}
-                <p className="text-sm text-gray-500">
-                  {project.date}
-                </p>
+                <p className="text-sm text-gray-500">{project.date}</p>
 
                 {/* Description */}
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -110,7 +130,6 @@ const ProjectsSection = () => {
 
                 {/* Buttons */}
                 <div className="flex gap-3 pt-3">
-
                   {/* Live Demo */}
                   <a
                     href={project.live}
@@ -139,16 +158,11 @@ const ProjectsSection = () => {
                       Code
                     </Button>
                   </a>
-
                 </div>
-
               </div>
-
             </div>
           ))}
-
         </div>
-
       </div>
     </section>
   );
