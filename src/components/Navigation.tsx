@@ -51,7 +51,7 @@ const Navigation = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-2 bg-white/70 backdrop-blur-lg border border-white/40 rounded-full px-2 py-2 shadow-sm">
+        <div className="hidden lg:flex items-center gap-2 bg-white/70 backdrop-blur-lg border border-white/40 rounded-full px-2 py-2 shadow-sm">
 
           {navItems.map((item) => (
             <Button
@@ -77,7 +77,7 @@ const Navigation = () => {
             type="button"
             aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={isOpen}
-            className="md:hidden p-2 rounded-lg bg-black/70 backdrop-blur-lg border border-gray-200 text-white"
+            className="lg:hidden p-2 rounded-lg bg-black/70 backdrop-blur-lg border border-gray-200 text-white"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={22} /> : <Menu size={22} />}
@@ -88,7 +88,7 @@ const Navigation = () => {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="mobile-nav-panel md:hidden mt-3 bg-white/80 backdrop-blur-xl border border-gray-200 rounded-2xl p-5 shadow-lg">
+        <div className="mobile-nav-panel lg:hidden mt-3 bg-white/80 backdrop-blur-xl border border-gray-200 rounded-2xl p-5 shadow-lg">
 
           <div className="flex flex-col items-center gap-4">
 

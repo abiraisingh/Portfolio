@@ -24,9 +24,9 @@ const HeroSection = () => {
       <div className="absolute bottom-[-150px] right-[-150px] w-[400px] h-[400px] bg-blue-300/40 rounded-full blur-[140px] animate-pulse"></div>
 
       <div className="relative z-10 max-w-6xl w-full mx-auto">
-        <div className="bg-white/70 backdrop-blur-xl border border-white/40 rounded-3xl shadow-xl p-8 md:p-12">
+        <div className="bg-white/70 backdrop-blur-xl border border-white/40 rounded-3xl shadow-xl p-8 lg:p-12">
 
-          <div className="grid md:grid-cols-2 gap-10 items-center min-h-[70vh]">
+          <div className="grid lg:grid-cols-2 gap-10 items-center lg:min-h-[70vh]">
 
             {/* LEFT SIDE */}
             <div className="space-y-6">
@@ -35,7 +35,7 @@ const HeroSection = () => {
                 Hello, I'm
               </p>
 
-              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
                 Abirai{" "}
                 <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
                   Singh
@@ -98,7 +98,7 @@ const HeroSection = () => {
               <div className="flex flex-wrap gap-4 pt-4">
 
                 {/* Download CV */}
-                <a href="/resume.pdf" download="Abirai_Singh_Resume.pdf">
+                <a href="/Abirai_Singh_Resume.pdf" download="Abirai_Singh_Resume.pdf">
                   <Button className="rounded-full px-6 flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:opacity-90">
                     <Download size={18} />
                     Download CV
@@ -107,7 +107,7 @@ const HeroSection = () => {
 
                 {/* View CV */}
                 <a
-                  href="/resume.pdf"
+                  href="/Abirai_Singh_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -155,7 +155,7 @@ const HeroSection = () => {
             </div>
 
             {/* RIGHT SIDE IMAGE */}
-            <div className="hidden md:flex justify-center md:justify-end">
+            <div className="hidden md:flex justify-center lg:justify-end">
 
               <div className="relative group">
 
@@ -165,7 +165,7 @@ const HeroSection = () => {
                 <img
                   src={heroPortrait}
                   alt="Abirai Singh"
-                  className="hero-portrait relative w-72 h-72 md:w-80 md:h-80 object-cover group-hover:scale-105 transition duration-500"
+                  className="hero-portrait relative w-72 h-72 lg:w-80 lg:h-80 object-cover group-hover:scale-105 transition duration-500"
                 />
 
               </div>

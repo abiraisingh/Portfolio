@@ -46,7 +46,7 @@ const ContactSection = () => {
       <div className="absolute bottom-[-120px] right-[-120px] w-[350px] h-[350px] bg-purple-300/40 rounded-full blur-[120px]" />
 
       <div className="relative z-10 max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-14 items-center">
+        <div className="grid lg:grid-cols-2 gap-14 items-center">
 
           {/* Left Side */}
           <div className="space-y-10">
@@ -54,7 +54,7 @@ const ContactSection = () => {
               Contact Me
             </h2>
 
-            <div className="relative flex justify-center md:justify-start">
+            <div className="relative flex justify-center lg:justify-start">
               <div className="relative group">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400 to-blue-400 blur-3xl opacity-40 group-hover:opacity-60 transition duration-500" />
 

@@ -42,10 +42,10 @@ const AboutSection = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto">
 
-        <div className="grid md:grid-cols-2 gap-14 items-center">
+        <div className="grid lg:grid-cols-2 gap-14 items-center">
 
           {/* Profile Image */}
-          <div className="hidden md:flex justify-center md:justify-start">
+          <div className="hidden md:flex justify-center lg:justify-start">
 
             <div className="relative group">
 
@@ -57,7 +57,7 @@ const AboutSection = () => {
                 alt="Profile"
                 loading="lazy"
                 decoding="async"
-                className="relative w-72 h-72 md:w-80 md:h-80 rounded-full object-cover border border-white shadow-xl group-hover:scale-105 transition duration-500"
+                className="relative w-72 h-72 lg:w-80 lg:h-80 rounded-full object-cover border border-white shadow-xl group-hover:scale-105 transition duration-500"
               />
 
             </div>
